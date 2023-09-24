@@ -1,0 +1,47 @@
+class Excitebike
+class Personaje
+class Corredor
+class Escenario
+class Moto
+class HUD
+class Temperatura
+class Tiempo
+class Marcador
+class Grada
+class Lodo
+class Rampa
+class Pasto
+class Carril
+class Barril
+class Espectador
+class Acelerador
+class LíneaDeSalida
+class LíneaDeMeta
+class Staff
+class Cámara
+class Música
+class Sonido
+
+Excitebike *-- Personaje
+Excitebike *-- Escenario
+Excitebike *-- HUD
+Excitebike *-- Música
+Personaje <|-- Corredor
+Personaje <|-- Espectador
+Personaje <|-- Staff
+Corredor o-- Moto
+Staff o-- Cámara
+Escenario *-- LíneaDeSalida
+Escenario *-- LíneaDeMeta
+Escenario *-- Grada
+Grada *-- Espectador
+Escenario *-- Rampa
+Escenario *-- Pasto
+Pasto *-- Barril
+Escenario *-- Carril
+Carril *-- Lodo
+Carril *-- Acelerador
+HUD *-- Marcador
+HUD *-- Temperatura
+HUD *-- Tiempo
+Música *-- Sonido
