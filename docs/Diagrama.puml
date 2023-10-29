@@ -1,3 +1,4 @@
+@@startuml Proyecto
 class Excitebike
 class Personaje
 class Corredor
