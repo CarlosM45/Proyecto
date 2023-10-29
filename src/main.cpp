@@ -1,6 +1,7 @@
 #include <Dibujo.hpp>
 #include <Ventana.hpp>
 #include <Corredor.hpp>
+#include <Rampa.hpp>
 
 #include <iostream>
 #include <fstream>
@@ -16,13 +17,23 @@ int main()
 {
     Ventana ventana;
     Corredor corredor;
-    Corredor* corredor1 = new Corredor(0, 15);
+    Rampa rampa;
+    Corredor* corredor1 = new Corredor(30, 15);
+    Rampa* rampa1=new Rampa(225,15);
+    Rampa* rampa2=new Rampa(450,0);
+    Rampa* rampa3=new Rampa(100,30);
 
     list<Dibujo *> dibujos;
     dibujos.push_back(corredor1);
+    dibujos.push_back(rampa1);
+    dibujos.push_back(rampa2);
+    dibujos.push_back(rampa3);
 
     list<Actualizable *> Actualizables;
     Actualizables.push_back(corredor1);
+    Actualizables.push_back(rampa1);
+    Actualizables.push_back(rampa2);
+    Actualizables.push_back(rampa3);
 
     getch();
 
@@ -39,13 +50,11 @@ int main()
         {
             corredor1->CarrilAbajo();
         }
-        if (ascii=='d'||ascii=='D'||ascii==KEY_RIGHT)
+        if (ascii=='z'||ascii=='Z'||ascii==KEY_RIGHT)
         {
-            corredor1->Derecha();
-        }
-        if (ascii=='a'||ascii=='A'||ascii==KEY_LEFT)
-        {
-            corredor1->Izquierda();
+            rampa1->Avanzar();
+            rampa2->Avanzar();
+            rampa3->Avanzar();
         }
         
         refresh();
