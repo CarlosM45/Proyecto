@@ -25,8 +25,9 @@ public:
     {
         this->y += 15;
     }
-    void SaltarRampa(int z){
-        this->y=z+8;
+    void SaltarRampa(int z)
+    {
+        this->y = z + 8;
     }
     ~Corredor() {}
 };

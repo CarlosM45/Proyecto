@@ -18,10 +18,10 @@ int main()
     Ventana ventana;
     Corredor corredor;
     Rampa rampa;
-    Corredor* corredor1 = new Corredor(30, 15);
-    Rampa* rampa1=new Rampa(225,15);
-    Rampa* rampa2=new Rampa(450,0);
-    Rampa* rampa3=new Rampa(100,30);
+    Corredor *corredor1 = new Corredor(30, 15);
+    Rampa *rampa1 = new Rampa(225, 15);
+    Rampa *rampa2 = new Rampa(450, 0);
+    Rampa *rampa3 = new Rampa(100, 30);
 
     list<Dibujo *> dibujos;
     dibujos.push_back(corredor1);
@@ -50,13 +50,13 @@ int main()
         {
             corredor1->CarrilAbajo();
         }
-        if (ascii=='z'||ascii=='Z'||ascii==KEY_RIGHT)
+        if (ascii == 'z' || ascii == 'Z' || ascii == KEY_RIGHT)
         {
             rampa1->Avanzar();
             rampa2->Avanzar();
             rampa3->Avanzar();
         }
-        
+
         refresh();
 
         ventana.Actualizar(Actualizables);

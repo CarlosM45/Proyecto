@@ -31,7 +31,7 @@ public:
         {
             Actualizable->Actualizar();
         }
-        usleep(1000/24);
+        usleep(1000 / 24);
     }
     void Dibujar(list<Dibujo *> dibujos)
     {
